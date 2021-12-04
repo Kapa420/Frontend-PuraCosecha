@@ -1,0 +1,28 @@
+<div class="backgrond">
+  <div class="container">
+    <div class="row justify-content-md-center" >
+      <div class="col-md-auto" id="columinicio">
+        <h1 id="inicio">Inicio de sesión</h1>
+      </div>
+      <img id="logo" src="../../../assets/login.png" width="300" height="300">
+      <form class="row g-3" id="columnas" [formGroup]="formGroup">
+        <div class="col-md-6">
+          <label for="inputEmail4" class="form-label">Email</label>
+          <input type="email" class="form-control" id="inputEmail4" formControlName="email">
+        </div>
+        <div class="col-md-6">
+          <label for="inputPassword4" class="form-label">Contraseña</label>
+          <input type="password" class="form-control" id="inputPassword4" formControlName="password">
+        </div>
+      </form>
+      <div class="row justify-content-around" id="botones">
+        <div class="col-6">
+          <button type="submit" id="accederCliente" class="btn btn-primary" routerLinkActive="router-link-active" (click)="inicioSesionCliente()">Ingresar como Cliente</button>
+        </div>
+        <div class="col-6">
+          <button type="submit" class="btn btn-primary" routerLinkActive="router-link-active" (click)="inicioSesionProductor()">Ingresar como Productor</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

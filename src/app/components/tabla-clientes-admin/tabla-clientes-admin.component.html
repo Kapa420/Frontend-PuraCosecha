@@ -1,0 +1,37 @@
+<app-administradores-mainpage></app-administradores-mainpage>
+
+<h2> Clientes actualmente registrados en la pagina. </h2>
+
+<div id="container">
+  <app-boton-modal-agregar-cliente></app-boton-modal-agregar-cliente>
+</div>
+
+<div class="tablaclientes">
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido</th>
+        <th scope="col">Direccion</th>
+        <th scope="col">Telefono</th>
+        <th scope="col">Email</th>
+        <th scope="col">Contraseña</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cliente of clientes">
+        <th scope="row">{{cliente.id_cliente}}</th>
+        <td>{{cliente.nombre}}</td>
+        <td>{{cliente.apellido}}</td>
+        <td>{{cliente.direccion}}</td>
+        <td>{{cliente.telefono}}</td>
+        <td>{{cliente.email}}</td>
+        <td>{{cliente.password}}</td>
+        <td><button type="button" class="btn btn-danger" (click)="eliminarCliente(cliente.id_cliente)">Eliminar</button></td>
+        <td><button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="irActualizarCliente(cliente)">Editar</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
