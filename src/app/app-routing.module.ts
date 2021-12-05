@@ -23,7 +23,7 @@ const routes: Routes = [
   {path: 'registroProductores', component: RegistroProductoresComponent},
   {path: 'sesionCliente', component: SesionClientesComponent},
   {path: 'sesionProductor', component: SesionProductoresComponent},
-  {path: '', component: BodyMainpageComponent},
+  {path: '/', component: BodyMainpageComponent},
   {path: '404', component: NotfoundComponent},
   {path: 'admins/cliente-admin', component: TablaClientesAdminComponent},
   {path: 'datosClientes', component:DatosClientesComponent},
